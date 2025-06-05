@@ -50,7 +50,7 @@ func makeRequest(task RequestTask, wg *sync.WaitGroup, results chan<- Result) {
 
     client := &http.Client{
         Transport: transport,
-        Timeout:   10 * time.Second,
+        Timeout:   4 * time.Second,
     }
 
     resp, err := client.Get(fullURL)
